@@ -105,7 +105,7 @@ var x = setInterval(function() {
 
 // RSVP Button
 function openRSVP() {
-  window.open("https://forms.gle/YOUR_FORM_LINK", "_blank");
+  window.open("https://https://forms.gle/AbHahr52wB6qBZ9W7", "_blank");
 }
 
 // WhatsApp Share
