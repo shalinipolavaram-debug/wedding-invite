@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wedding Invitation</title>
-
 <style>
-body {
   body {
   background-image: url('da.jpeg');
   background-size: cover;
@@ -14,9 +12,7 @@ body {
   background-repeat: no-repeat;
   margin: 0;
 }
-}
-
-.card {
+card {
   background: rgba(255, 255, 255, 0.9);
   padding: 25px;
   margin: 60px auto;
