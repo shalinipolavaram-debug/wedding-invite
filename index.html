@@ -1,23 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Wedding Invitation</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://images.unsplash.com/photo-1520857014576-2c4f4c972b57');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  margin: 80px auto;
+  width: 320px;
+  border-radius: 15px;
+}
+
+a {
+  display: block;
+  margin: 10px;
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#countdown {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+</style>
 </head>
 
 <body>
-  <div class="card">
-    <h1>💍 Polavaram Purushotham weds Gali Hemalatha</h1>
-    <p>Date: 5 May 2026</p>
-    <p>Time: 10:00 AM</p>
-    <p>Venue: Tirumula</p>
 
-    <button onclick="addToCalendar()">📅 Add to Calendar</button>
-    <button onclick="shareWhatsApp()">📲 Share on WhatsApp</button>
+<div class="card">
+  <h1>💍 Polavaram Purushotham ❤️ Gali Hema Latha</h1>
+  <p>We invite you to our wedding</p>
+  <p>📅 Date: 5 May 2026</p>
+  <p>📍 Venue: Tirumula</p>
 
-    <p id="countdown"></p>
-  </div>
+  <h2 id="countdown"></h2>
 
-  <script src="script.js"></script>
+  <a href="https://maps.google.com" target="_blank">📍 View Location</a>
+  <a href="https://forms.gle/https://maps.app.goo.gl/G6LvALYFn1VXPRAc7?g_st=aw" target="_blank">✅ RSVP Here</a>
+</div>
+
+<!-- Music -->
+<audio autoplay loop>
+  <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Countdown Script -->
+<script>
+var countDownDate = new Date("June 20, 2026 10:00:00").getTime();
+
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  document.getElementById("countdown").innerHTML =
+  "⏳ " + days + " days to go 💍";
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "🎉 Wedding Day!";
+  }
+}, 1000);
+</script>
+
 </body>
 </html>
