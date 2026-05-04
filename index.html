@@ -34,7 +34,7 @@ a {
 
 button {
   padding: 10px 15px;
-  margin: 10px 5px;
+  margin-top: 10px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -53,7 +53,8 @@ button {
 <body>
 
 <div class="card">
-  <h1>💍 Polavaram Purushotham ❤️ Gali Hema Latha</h1>
+  <h1>💍 Wedding Invitation</h1>
+
   <p>We invite you to our wedding</p>
   <p>📅 Date: 5 May 2026</p>
   <p>⏰ Time: 10:00 AM</p>
@@ -69,37 +70,41 @@ button {
     ✅ RSVP Here
   </a>
 
-  <!-- 🎵 Music Button -->
   <button onclick="playMusic()">🎵 Play Music</button>
 </div>
 
-<!-- 🎵 FIXED AUDIO FILE -->
+<!-- AUDIO -->
 <audio id="myAudio" loop>
   <source src="song.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-// ⏳ Countdown Timer
+// Countdown Timer
 const weddingDate = new Date(2026, 4, 5, 10, 0, 0).getTime();
 
-setInterval(function() {
+setInterval(() => {
   const now = new Date().getTime();
   const gap = weddingDate - now;
+
+  if (gap <= 0) {
+    document.getElementById("countdown").innerHTML = "🎉 Wedding Day!";
+    return;
+  }
 
   const days = Math.floor(gap / (1000 * 60 * 60 * 24));
   const hours = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
   document.getElementById("countdown").innerHTML =
     "⏳ " + days + " days " + hours + " hours left 💍";
-
-  if (gap < 0) {
-    document.getElementById("countdown").innerHTML = "🎉 Wedding Day!";
-  }
 }, 1000);
 
-// 🎵 Play Music
+// Play Music
 function playMusic() {
-  document.getElementById("myAudio").play();
+  const audio = document.getElementById("myAudio");
+  audio.play().catch(err => {
+    alert("Click again to enable audio (browser restriction)");
+    console.log(err);
+  });
 }
 </script>
 
