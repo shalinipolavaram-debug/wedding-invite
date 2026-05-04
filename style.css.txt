@@ -71,11 +71,11 @@ button:hover {
 <body>
 
 <div class="card">
-  <h1>Shalini ❤️ [Partner Name]</h1>
+  <h1>Polavaram Purushotham ❤️ [Gali Hema latha]</h1>
   <p>We invite you to our wedding</p>
-  <p>📅 Date: June 20, 2026</p>
+  <p>📅 Date: May 5, 2026</p>
   <p>⏰ Time: 10:00 AM</p>
-  <p>📍 Venue: Vijayawada</p>
+  <p>📍 Venue: Tirumula</p>
 
   <button class="rsvp" onclick="openRSVP()">RSVP</button>
   <button class="whatsapp" onclick="shareWhatsApp()">Share</button>
@@ -85,7 +85,7 @@ button:hover {
 
 <script>
 // Countdown Timer
-var countDownDate = new Date("June 20, 2026 10:00:00").getTime();
+var countDownDate = new Date("May 5, 2026 10:00:00").getTime();
 
 var x = setInterval(function() {
   var now = new Date().getTime();
