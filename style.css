@@ -4,15 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wedding Invitation</title>
+
 <style>
-  body {
+body {
   background-image: url('da.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
 }
-card {
+
+.card {
   background: rgba(255, 255, 255, 0.9);
   padding: 25px;
   margin: 60px auto;
@@ -23,12 +27,10 @@ card {
 
 h1 {
   color: #d6336c;
-  margin-bottom: 10px;
 }
 
 p {
   font-size: 16px;
-  margin: 5px 0;
 }
 
 button {
@@ -37,12 +39,6 @@ button {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-button:hover {
-  transform: scale(1.05);
 }
 
 .rsvp {
@@ -66,11 +62,11 @@ button:hover {
 <body>
 
 <div class="card">
-  <h1>Polavaram Purushotham ❤️ [Gali Hema latha]</h1>
+  <h1>💍 Polavaram Purushotham ❤️ Gali Hema Latha</h1>
   <p>We invite you to our wedding</p>
   <p>📅 Date: May 5, 2026</p>
   <p>⏰ Time: 10:00 AM</p>
-  <p>📍 Venue: Tirumula</p>
+  <p>📍 Venue: Tirumala</p>
 
   <button class="rsvp" onclick="openRSVP()">RSVP</button>
   <button class="whatsapp" onclick="shareWhatsApp()">Share</button>
@@ -79,8 +75,8 @@ button:hover {
 </div>
 
 <script>
-// Countdown Timer
-var countDownDate = new Date("May 5, 2026 10:00:00").getTime();
+// ACCURATE countdown
+var countDownDate = new Date(2026, 4, 5, 10, 0, 0).getTime();
 
 var x = setInterval(function() {
   var now = new Date().getTime();
@@ -90,7 +86,7 @@ var x = setInterval(function() {
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 
   document.getElementById("countdown").innerHTML =
-  "⏳ " + days + " days " + hours + " hours left 💍";
+    "⏳ " + days + " days " + hours + " hours left 💍";
 
   if (distance < 0) {
     clearInterval(x);
@@ -98,12 +94,12 @@ var x = setInterval(function() {
   }
 }, 1000);
 
-// RSVP Button
+// RSVP
 function openRSVP() {
   window.open("https://forms.gle/aLQPT8MqcXdpXaHs7", "_blank");
 }
 
-// WhatsApp Share
+// WhatsApp
 function shareWhatsApp() {
   var url = "https://shalinipolavaram-debug.github.io/wedding-invite/";
   var text = "You're invited to our wedding 💍 " + url;
