@@ -7,14 +7,13 @@
 
 <style>
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  text-align: center;
-  background: linear-gradient(to right, #ffcccc, #ffe6e6),
-              url('da.jpeg');
+  body {
+  background-image: url('da.jpeg');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   margin: 0;
-  padding: 0;
+}
 }
 
 .card {
